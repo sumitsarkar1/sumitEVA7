@@ -93,7 +93,7 @@ transform_test = transforms.Compose([
 
 # load test data with batch size = 1 for predicting on CPU 
 dataloader_args_ = dict(shuffle=False, batch_size=1)
-test_ = torchvision.datasets.CIFAR10('./data', train=False, download=False, transform=transform_test)
+test_ = torchvision.datasets.CIFAR10('./data', train=False, download=True, transform=transform_test)
 test_loader_ = torch.utils.data.DataLoader(test_, **dataloader_args_)
 
 test_inf = torchvision.datasets.CIFAR10('./data', train=False, download=False)
