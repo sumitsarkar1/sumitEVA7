@@ -20,7 +20,7 @@ from sumitEVA7.models import resnet18_64
 criterion = nn.CrossEntropyLoss()
 
 def getModel():
-    net = resnet.ResNet18()
+    net = resnet18_64.ResNet18()
     return net
 
 def setOptimizer(net, lr):
