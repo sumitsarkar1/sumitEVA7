@@ -81,7 +81,7 @@ lrs = []
 def train(net,optimizer, trainloader, device):
     grad_clip = 0.1
     net.train()
-    #pbar = tqdm(trainloader)
+    pbar = tqdm(trainloader)
     correct = 0
     processed = 0
     #lrs = []
@@ -89,7 +89,7 @@ def train(net,optimizer, trainloader, device):
     train_loss_epoch = 0
     correct_epoch = 0
     
-    for batch_idx, (data, target) in enumerate(trainloader):    
+    for batch_idx, (data, target) in enumerate(pbar):    
         # get samples
         data, target = data.to(device), target.to(device)
         # Init
