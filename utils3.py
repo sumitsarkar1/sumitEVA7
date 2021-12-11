@@ -22,9 +22,10 @@ def getTrainTransforms():
          A.Sequential([ A.PadIfNeeded(min_height=64+8, min_width=64+8,),A.RandomCrop(height=64, width=64)], p=0.5),
          A.HorizontalFlip(p=0.5),
          A.Normalize(mean=(0.4914, 0.4822, 0.4465), std=(0.2023, 0.1994, 0.2010)),
+         A.geometric.rotate.Rotate(limit=15, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, p=0.5),
+         A.RGBShift (r_shift_limit=20, g_shift_limit=20, b_shift_limit=20, always_apply=False, p=0.5),
          A.CoarseDropout(max_holes = 2, max_height=8, max_width=8, min_holes = 1, min_height=1, min_width=1,
                         fill_value=(0.4914, 0.4822, 0.4465),p=0.5),
-         A.geometric.rotate.Rotate(limit=15, interpolation=1, border_mode=4, value=None, mask_value=None, always_apply=False, p=0.5)
          ToTensorV2()
          ])
     return train_transforms
