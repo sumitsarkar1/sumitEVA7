@@ -16,6 +16,7 @@ import argparse
 
 import sumitEVA7
 from sumitEVA7.models import resnet18_64
+from sumitEVA7 import utils3
 
 criterion = nn.CrossEntropyLoss()
 
