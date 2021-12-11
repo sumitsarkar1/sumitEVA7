@@ -43,7 +43,8 @@ class args():
         
 def getTrainTestLoader(args):
     #data_dir = '/home/sumit/eva7/assignment10/IMagenet/tiny-imagenet-200/'
-    data_dir = '/home/rogbot/eva7_/assignment10/IMagenet/tiny-imagenet-200'
+    #data_dir = '/home/rogbot/eva7_/assignment10/IMagenet/tiny-imagenet-200'
+    data_dir = '/content/IMagenet/tiny-imagenet-200'
     num_workers = {'train' : 4,'val'   : 0,'test'  : 0}
     data_transforms = {
         'train': transforms.Compose([
