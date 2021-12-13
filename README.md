@@ -4,5 +4,5 @@ Directory Structure for Deep Learning Assignments
 
 Models folder contains three customized ResNet18 architectures:
 1. *resnset.py* for gradcam example
-2. *custom_resnet.py* for 90% on Cifar10 data in 24 epochs
+2. *custom_resnet.py* for 90% Test accuracy on Cifar10 data in 24 epochs
 3. *resnet18_64.py* for TinyImageNet data set with input size of 64x64
